@@ -1,0 +1,12 @@
+/* Style the container/contact section */
+.container {
+    border-radius: 5px;
+    background-color: #33bed0;
+    padding: 32px;
+  }
+
+.description{
+    color: white;
+    font-size: 24px;
+    padding: 16px;
+}

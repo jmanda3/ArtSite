@@ -1,0 +1,55 @@
+.w3-badge {
+    height:13px;
+    width:13px;
+    padding:0px;
+    margin: 0px 5px;
+  }
+
+  .dot{
+    height: 13px;
+    width: 13px;
+    padding: 0px;
+    margin: 0px 5px;
+    background-color: #fff;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+  }
+
+  .dot:hover{
+    color:#fff!important;
+    background-color: #33bed0;
+  }
+
+  .dot-border{
+    border: 1px solid #33bed0!important;
+  }
+
+  .dot-img{
+      width: 980px;
+      height: 740px;
+  }
+
+  @media screen and (max-width: 1200px) {
+    .dot-img{
+        width: 100%;
+        height: 500px;
+    }
+  }
+
+    /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+      .dot-img{
+          width: 100%;
+          height: 500px;
+      }
+    }
+    
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+      .dot-img{
+          width: 100%;
+          height: 330px;
+      }
+    }

@@ -1,0 +1,17 @@
+<table mat-table [dataSource="tableDataSrc" class="mat-elevation-z8"]>
+    <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <td mat-cell  *matCellDef="let profile">{{profile.name}}</td>
+    </ng-container>
+    <ng-container matColumnDef="role">
+        <th mat-header-cell *matHeaderCellDef>Role</th>
+        <td mat-cell  *matCellDef="let profile">{{profile.role}}</td>
+    </ng-container>
+    <ng-container matColumnDef="skills">
+        <th mat-header-cell *matHeaderCellDef>Skillset</th>
+        <td mat-cell  *matCellDef="let profile">{{profile.skillset}}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="tableCOls"></tr>
+    <tr mat-row *matRowDef="let row; columns: tableCols"></tr>
+</table>
