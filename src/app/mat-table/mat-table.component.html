@@ -1,17 +1,45 @@
-<table mat-table [dataSource="tableDataSrc" class="mat-elevation-z8"]>
-    <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef>Name</th>
-        <td mat-cell  *matCellDef="let profile">{{profile.name}}</td>
-    </ng-container>
-    <ng-container matColumnDef="role">
-        <th mat-header-cell *matHeaderCellDef>Role</th>
-        <td mat-cell  *matCellDef="let profile">{{profile.role}}</td>
-    </ng-container>
-    <ng-container matColumnDef="skills">
-        <th mat-header-cell *matHeaderCellDef>Skillset</th>
-        <td mat-cell  *matCellDef="let profile">{{profile.skillset}}</td>
-    </ng-container>
-
-    <tr mat-header-row *matHeaderRowDef="tableCOls"></tr>
-    <tr mat-row *matRowDef="let row; columns: tableCols"></tr>
+<div>
+    <label for="sortOptions" class="selectBoxLabel">Sort By:</label>
+    <select name="sortOptions" id="sortOptions" #t (change)="sortChanged(t.value)" [(ngModel)]="selectedSortOption" class="selectBox">
+        <option value="date">Date Desc</option>
+        <option value="dateAsc">Date Asc</option>
+        <option value="title">Title</option>
+    </select>
+    <label for="filterOptions" class="selectBoxLabel">Filter By:</label>
+    <select name="filterOptions" id="filterOptions" [(ngModel)]="selectedFilterOption" class="selectBox">
+        <option value=""></option>
+        <option value="collection">Collection</option>
+        <option value="medium">Medium</option>
+    </select>
+    <div style="display: inline;" *ngIf="selectedFilterOption !== '' && selectedFilterOption !== undefined && selectedFilterOption !== null">
+        <label for="filterValue" class="selectBoxLabel">{{selectedFilterOption | titlecase}}</label>
+        <select name="filterValue" id="filterValue" (change)="filerValueChanged()" [(ngModel)]="selectedFilterValue" class="selectBox">
+            <option value=""></option>
+            <option *ngIf="selectedFilterOption === 'collection'" value="collection1">Collection1</option>
+            <option *ngIf="selectedFilterOption === 'collection'" value="collection2">Collection2</option>
+            <option *ngIf="selectedFilterOption === 'medium'" value="paint">Paint</option>
+            <option *ngIf="selectedFilterOption === 'medium'" value="digital">Digital</option>
+        </select>
+    </div>
+</div>
+<table class="table">
+    <tbody>
+        <tr *ngFor="let col of rowArray; index as i">
+        <td *ngFor="let col of colArray; index as j">
+            <div *ngIf="imageGrid[i][j] !== null && imageGrid[i][j] !== undefined">
+                <img [src]="imageGrid[i][j].collectionUrl" alt="Norway" style="width:100%" class="w3-hover-opacity" (click)="showFullScreen(i, j)">
+                <div class="w3-container w3-white">
+                    <p><b>{{imageGrid[i][j].title}}</b></p>
+                    <p>{{imageGrid[i][j].description}}</p>
+                </div>
+            </div>
+        </td>
+        </tr>
+    </tbody>
 </table>
+<mat-paginator class="matExtras" [length]="imagesModified.length"
+              [pageSize]="perPage"
+              [pageSizeOptions]="pageSizeOptions"
+              (page)="pageEvent = updatePage($event)">
+</mat-paginator>
+<app-fullscreen-image-viewer [images]="imagesModified" [imageIndex]="imageIndex" [show]="showFullscreen" (close)="closeEventHandler()"></app-fullscreen-image-viewer>

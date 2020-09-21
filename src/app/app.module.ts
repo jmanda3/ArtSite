@@ -7,7 +7,6 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
-import { InstaPanelComponent } from './insta-panel/insta-panel.component';
 import { SlideshowComponent } from './slideshow/slideshow.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { FeatureTextComponent } from './feature-text/feature-text.component';
@@ -16,7 +15,11 @@ import { FeatureImagesComponent } from './feature-images/feature-images.componen
 import { FeatureTitlesComponent } from './feature-titles/feature-titles.component';
 import { PortfolioPageComponent } from './portfolio-page/portfolio-page.component';
 import { MatTableComponent } from './mat-table/mat-table.component';
-import { MatTableModule } from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
+import { ContactIconsComponent } from './contact-icons/contact-icons.component';
+import { FullscreenImageViewerComponent } from './fullscreen-image-viewer/fullscreen-image-viewer.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,6 @@ import { MatTableModule } from '@angular/material/table';
     HomeComponent,
     FooterComponent,
     ContactFormComponent,
-    InstaPanelComponent,
     SlideshowComponent,
     ContactPageComponent,
     FeatureTextComponent,
@@ -33,12 +35,16 @@ import { MatTableModule } from '@angular/material/table';
     FeatureImagesComponent,
     FeatureTitlesComponent,
     PortfolioPageComponent,
-    MatTableComponent
+    MatTableComponent,
+    ContactIconsComponent,
+    FullscreenImageViewerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatTableModule
+    MatPaginatorModule,
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

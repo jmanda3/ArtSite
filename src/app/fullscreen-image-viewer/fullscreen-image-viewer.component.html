@@ -1,0 +1,14 @@
+<!-- The Modal -->
+<div id="myModal" class="modal" *ngIf="show === true">
+    <span class="close" (click)="closeClicked()">&times;</span>
+    <div class="container">
+        <div class="imgContainer">
+            <img class="modal-content" id="modalImage" [(src)]="images[imageIndex].imgUrl">
+        </div>
+        <div class="arrowContainer">
+            <a class="prev" (click)="previousArrowClicked()">❮</a>
+            <a class="next" (click)="nextArrowClicked()">❯</a>
+        </div>
+    </div>
+  </div>
+  

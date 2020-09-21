@@ -10,13 +10,8 @@ import { Slide } from '../models/slide';
 export class HomeComponent implements OnInit {
 
   
-  // images = [
-  //   "../../assets/home_images/anchoranvil_home.jpg",
-  //   "../../assets/home_images/carousel_02.jpg",
-  //   "../../assets/home_images/anchoranvil_home.jpg",
-  //   "../../assets/home_images/carousel_02.jpg",
-  //   "../../assets/home_images/anchoranvil_home.jpg",
-  // ]
+  collectionName = 'collection1';
+
   constructor() { }
   ngOnInit(): void {
   }

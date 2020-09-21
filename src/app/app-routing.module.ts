@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { AboutPageComponent } from './about-page/about-page.component';
+import { PortfolioPageComponent } from './portfolio-page/portfolio-page.component';
 
 
 const routes: Routes = [
@@ -10,6 +11,8 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'contact', component: ContactPageComponent},
   {path: 'about', component: AboutPageComponent},
+  {path: 'portfolio', component: PortfolioPageComponent},
+  {path: 'portfolio/:collection', component: PortfolioPageComponent, pathMatch: 'full'}
 ];
 
 @NgModule({
