@@ -44,6 +44,8 @@ export class MatTableComponent implements OnInit, OnDestroy {
     this.initImageArray();
     if(this.collectionName !== '' || this.collectionName !== null || this.collectionName !== undefined){
       this.filterImages('collection', this.collectionName);
+      this.selectedFilterOption = 'collection';
+      this.selectedFilterValue = this.collectionName;
     }
     //this.filterImages('collection', 'john collection1')
     //this.filterImages('medium', 'paint1')

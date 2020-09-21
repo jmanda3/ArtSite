@@ -12,6 +12,8 @@ import { ActivatedRoute } from '@angular/router';
 export class HeaderComponent implements OnInit {
 
   pageRef: string = "Home"
+  //displayFullNav = 'block';
+  displaySmallNav = 'none;'
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
@@ -21,4 +23,16 @@ export class HeaderComponent implements OnInit {
     this.pageRef = this.pageRef.charAt(0).toUpperCase() + this.pageRef.slice(1);
   }
 
+  close(){
+    this.displaySmallNav = 'none';
+  }
+
+  open(){
+    if(this.displaySmallNav === 'block'){
+      this.displaySmallNav = 'none';
+    }
+    else{
+      this.displaySmallNav = 'block';
+    }
+  }
 }

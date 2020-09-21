@@ -1,8 +1,21 @@
+<!-- shows menu icon for small screens -->
+<a class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" (click)="open()">
+    <i class="fa fa-bars"></i>
+</a>
+    <!-- Sidebar on small screens when clicking the menu icon -->
+<div class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" [ngStyle]="{display: displaySmallNav}">
+    <a (click)="close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close X</a>
+    <a routerLink="/home" (click)="close()" class="w3-bar-item w3-button">Home</a>
+    <a routerLink="/about" (click)="close()" class="w3-bar-item w3-button">About</a>
+    <a routerLink="/portfolio" (click)="close()" class="w3-bar-item w3-button">WorkPortfolio</a>
+    <a href="https://www.etsy.com/shop/LindsayMillerArtShop?ref=search_shop_redirect" (click)="close()" class="w3-bar-item w3-button">Shop</a>
+    <a routerLink="/contact" (click)="close()" class="w3-bar-item w3-button">Contact</a>
+</div>
 <header class=" w3-center" style="padding:0px 16px; margin: 0px;">
     <img class="logo" src="../../assets/lm_logo_header.png"/>
     <div style="margin-top: 16px;">Lindsay Miller Art</div>
 
-    <div class="w3-padding-32">
+    <div class="w3-padding-32 w3-hide-small">
         <div class="w3-bar">
         <a routerLink="/home" class="w3-bar-item w3-button headerBtn">Home</a>
         <a routerLink="/about" class="w3-bar-item w3-button headerBtn">About</a>
