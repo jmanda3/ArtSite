@@ -1,12 +1,12 @@
 <div>
-    <label for="sortOptions" class="selectBoxLabel">Sort By:</label>
+    <label id="top" for="sortOptions" class="selectBoxLabel">Sort By:</label>
     <select name="sortOptions" id="sortOptions" #t (change)="sortChanged(t.value)" [(ngModel)]="selectedSortOption" class="selectBox">
         <option value="date">Date Desc</option>
         <option value="dateAsc">Date Asc</option>
         <option value="title">Title</option>
     </select>
     <label for="filterOptions" class="selectBoxLabel">Filter By:</label>
-    <select name="filterOptions" id="filterOptions" [(ngModel)]="selectedFilterOption" class="selectBox">
+    <select name="filterOptions" id="filterOptions" [(ngModel)]="selectedFilterOption" class="selectBox" (change)="filterOptionChanged()">
         <option value=""></option>
         <option value="collection">Collection</option>
         <option value="medium">Medium</option>
@@ -15,10 +15,13 @@
         <label for="filterValue" class="selectBoxLabel">{{selectedFilterOption | titlecase}}</label>
         <select name="filterValue" id="filterValue" (change)="filerValueChanged()" [(ngModel)]="selectedFilterValue" class="selectBox">
             <option value=""></option>
-            <option *ngIf="selectedFilterOption === 'collection'" value="collection1">Collection1</option>
-            <option *ngIf="selectedFilterOption === 'collection'" value="collection2">Collection2</option>
-            <option *ngIf="selectedFilterOption === 'medium'" value="paint">Paint</option>
-            <option *ngIf="selectedFilterOption === 'medium'" value="digital">Digital</option>
+            <ng-container *ngIf="selectedFilterOption === 'collection'" >
+                <option *ngFor="let collection of collections" [ngValue]="collection.Name">{{collection.Name}}</option>
+            </ng-container>
+            <ng-container *ngIf="selectedFilterOption === 'medium'">
+                <option *ngFor="let medium of mediums" [ngValue]="medium.Name">{{medium.Name}}</option>
+
+            </ng-container>
         </select>
     </div>
 </div>
@@ -30,7 +33,7 @@
                 <img [src]="imageGrid[i][j].collectionUrl" alt="Norway" style="width:100%" class="w3-hover-opacity" (click)="showFullScreen(i, j)">
                 <div class="w3-container w3-white">
                     <p><b>{{imageGrid[i][j].title}}</b></p>
-                    <p>{{imageGrid[i][j].description}}</p>
+                    <p style="height: 70px;">{{imageGrid[i][j].description}}</p>
                 </div>
             </div>
         </td>

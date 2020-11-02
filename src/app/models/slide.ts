@@ -1,5 +1,5 @@
-export class Slide{
-    Name: string;
-    Description: string;
-    Url: string;
+export class slide{
+    name: string;
+    description: string;
+    url: string;
 }

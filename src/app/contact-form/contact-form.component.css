@@ -37,7 +37,7 @@
   .container {
     border-radius: 5px;
     background-color: #33bed0;
-    padding: 32px;
+    padding: 32px 128px;
   }
   
   /* Create two columns that float next to eachother */
@@ -64,6 +64,7 @@
       font-weight: 400;
       margin: 10px 0px;
       font-size: 24px;
+      float: left;
   }
   
   /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */

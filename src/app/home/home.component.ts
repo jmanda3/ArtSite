@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { SimplePlaceholderMapper } from '@angular/compiler/src/i18n/serializers/serializer';
-import { Slide } from '../models/slide';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +9,7 @@ import { Slide } from '../models/slide';
 export class HomeComponent implements OnInit {
 
   
-  collectionName = 'collection1';
+  collectionName = 'Local Eats';
 
   constructor() { }
   ngOnInit(): void {

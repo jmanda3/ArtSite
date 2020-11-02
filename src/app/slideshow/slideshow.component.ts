@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Slide } from '../models/slide';
+import { slide } from '../models/slide';
 
 @Component({
   selector: 'app-slideshow',
@@ -8,13 +8,12 @@ import { Slide } from '../models/slide';
 })
 export class SlideshowComponent implements OnInit {
 
-  slide: Slide;
-  slides: Slide[] = [
-    {Name: 'test', Description: 'Test Name\nTest place\nTest thing', Url: '../../assets/home_images/carousel_01.jpg'},
-    {Name: 'test', Description: 'Test Name\nTest place\nTest thing1', Url: '../../assets/home_images/carousel_02.jpg'},
-    {Name: 'test', Description: 'Test Name\nTest place\nTest thing2', Url: '../../assets/home_images/carousel_03.jpg'},
-    {Name: 'test', Description: 'Test Name\nTest place\nTest thing3', Url: '../../assets/home_images/carousel_04.jpg'},
-    {Name: 'test', Description: 'Test Name\nTest place\nTest thing4', Url: '../../assets/home_images/carousel_05.jpg'}
+  slide: slide;
+  slides: slide[] = [
+    {name: 'test', description: 'Test Name\nTest place\nTest thing', url: '../../assets/home_images/scroll_anchoranvil.jpg'},
+    {name: 'test', description: 'Test Name\nTest place\nTest thing1', url: '../../assets/home_images/scroll_foodcoop.jpg'},
+    {name: 'test', description: 'Test Name\nTest place\nTest thing2', url: '../../assets/home_images/scroll_giovannis.jpg'},
+    {name: 'test', description: 'Test Name\nTest place\nTest thing3', url: '../../assets/home_images/scroll_muddycup.jpg'}
   ]
   slideIndex: number = 0;
   imgUrl: string = "";
@@ -30,14 +29,14 @@ export class SlideshowComponent implements OnInit {
   initSlider(){
     this.slideIndex = 0;
     this.startTimer();
-    this.imgUrl = this.slides[this.slideIndex].Url;
+    this.imgUrl = this.slides[this.slideIndex].url;
     this.slide = this.slides[this.slideIndex];
   }
 
   showNextImage(){
     this.slideIndex++;
     if(this.slideIndex >= this.slides.length -1) this.slideIndex = 0;
-    this.imgUrl = this.slides[this.slideIndex].Url;
+    this.imgUrl = this.slides[this.slideIndex].url;
     this.slide = this.slides[this.slideIndex];
     this.timeLeft = 5;
   }
@@ -45,14 +44,14 @@ export class SlideshowComponent implements OnInit {
   showPreviousImage(){
     this.slideIndex--;
     if(this.slideIndex <= 0 ) this.slideIndex = this.slides.length -1;
-    this.imgUrl = this.slides[this.slideIndex].Url;
+    this.imgUrl = this.slides[this.slideIndex].url;
     this.slide = this.slides[this.slideIndex];
     this.timeLeft = 5;
   }
 
   showImage(imageId: number){
     this.slideIndex = imageId;
-    this.imgUrl = this.slides[this.slideIndex].Url;
+    this.imgUrl = this.slides[this.slideIndex].url;
     this.slide = this.slides[this.slideIndex];
   }
 

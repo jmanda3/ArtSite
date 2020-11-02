@@ -1,7 +1,12 @@
 import { CdkColumnDef } from '@angular/cdk/table';
-import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { PageEvent } from '@angular/material/paginator';
+import { collection } from '../models/collection';
 import { image } from '../models/image';
+import collectionsJson from '../../assets/collections.json';
+import mediumsJson from '../../assets/mediums.json';
+import { medium } from '../models/medium';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-mat-table',
@@ -26,6 +31,8 @@ export class MatTableComponent implements OnInit, OnDestroy {
   paginationIndex = 0;
   pageSizeOptions: number[] = [15, 30, 60];
   pageEvent: PageEvent;
+  collections: collection[];
+  mediums: medium[];
 
   //Filter and sort info
   selectedFilterOption: string;
@@ -39,10 +46,12 @@ export class MatTableComponent implements OnInit, OnDestroy {
   constructor() { }
 
   ngOnInit() {
+    this.collections = collectionsJson;
+    this.mediums = mediumsJson;
     this.imagesModified = this.imagesOriginal;
     this.selectedSortOption = this.defaultSort;
     this.initImageArray();
-    if(this.collectionName !== '' || this.collectionName !== null || this.collectionName !== undefined){
+    if(this.collectionName !== '' && this.collectionName !== null && this.collectionName !== undefined){
       this.filterImages('collection', this.collectionName);
       this.selectedFilterOption = 'collection';
       this.selectedFilterValue = this.collectionName;
@@ -93,6 +102,7 @@ export class MatTableComponent implements OnInit, OnDestroy {
   }
 
   setupImageTable(){
+    //document.querySelector('#top').scrollIntoView({ behavior: 'smooth', block: 'center' });
     var index = this.paginationIndex;
     //this.imageGrid = image[][];
     this.imageGrid = Array(this.rows).fill(null).map(()=>Array(this.colums).fill(null));
@@ -143,14 +153,14 @@ export class MatTableComponent implements OnInit, OnDestroy {
   }
 
   filterImages(filterOptions: string, filterValue){
-    if(filterOptions === 'collection' && filterValue !== ''){
+    if(filterOptions.toUpperCase() === 'COLLECTION' && filterValue !== ''){
       this.imagesModified = this.imagesOriginal.filter(i => {
         return i.collection.toUpperCase() === filterValue.toUpperCase();
       });
     }
-    else if(filterOptions === 'medium' && filterValue !== ''){
+    else if(filterOptions.toUpperCase() === 'MEDIUM' && filterValue !== ''){
       this.imagesModified = this.imagesOriginal.filter(i => {
-        return i.medium === filterValue;
+        return i.medium.toUpperCase() === filterValue.toUpperCase();
       });
     }
     else{
@@ -158,11 +168,14 @@ export class MatTableComponent implements OnInit, OnDestroy {
     }
     this.sortImages(this.selectedSortOption);
     this.setupImageTable();
-    
   }
 
   filerValueChanged(){
     this.filterImages(this.selectedFilterOption, this.selectedFilterValue);
+  }
+  
+  filterOptionChanged(){
+    this.filerValueChanged();
   }
 
   sortChanged(value){

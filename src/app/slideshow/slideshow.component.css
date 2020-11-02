@@ -27,8 +27,8 @@
   }
 
   .dot-img{
-      width: 980px;
-      height: 740px;
+      width: auto;
+      height: 600px;
   }
 
   @media screen and (max-width: 1200px) {
