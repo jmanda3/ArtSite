@@ -1,9 +1,9 @@
 <app-feature-images image1="../../assets/home_images/pinklemonade_home.jpg" image2="../../assets/home_images/summerday_home.jpg" image3="../../assets/home_images/provoke_home.jpg"></app-feature-images>
 <div class="w3-center w3-padding-64 content">
     <div class="row">
-        <div class="column" style="text-align: left; padding-right: 64px;">
-            <h3>Most Recent/ Current Series</h3>
-            <p>
+        <div class="column">
+            <h3 style="color: #33bed0; margin-top: 0px;" class="mobileCentered">Local Eats</h3>
+            <p class="mobileCentered">
                 During quarantine and this most recent pandemic, I have heard and seen the importance
                 of small businesses. This series focuses on local small businesses around Pittsburgh. From the
                 perspective of interiors/atmosphere – I want the viewer to feel as if they are truly there. And
@@ -15,12 +15,15 @@
         </div>
         <div class="column">
             <img src="../../assets/home_images/LocalEats_Teaser_03.jpg">
-            <a [routerLink]="['/portfolio']" [queryParams]="{ collection:collectionName }" >Click to view full series ></a>
+            <a style="float: left;" [routerLink]="['/portfolio']" [queryParams]="{ collection:collectionName }" >Click to view full series ></a>
         </div>
     </div>
 </div>
 <app-slideshow></app-slideshow>
-<app-contact-form title="EMAIL SIGNUP OR CONTACT FORM"></app-contact-form>
+<app-contact-form 
+title="Commisions 
+Requests 
+Subscribe"></app-contact-form>
 <div class="w3-center bottomImg">
     <img style="width: 100%;" src="../../assets/home_images/footer_home.jpg"/>
 </div>

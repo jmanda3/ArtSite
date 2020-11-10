@@ -11,6 +11,12 @@
   height: 35px;
   opacity: 50%;
   margin: 10px;
+  border: 2px solid #868686;
+  border-radius: 5px;
+}
+
+.box{
+  opacity: 50% !important;
 }
 
 .selectBoxLabel{

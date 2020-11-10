@@ -1,10 +1,10 @@
-.row {
+  .container{
+    background-repeat: no-repeat;
+  }
+
+  .row {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    background-image: url("../../assets/home_images/provoke_home.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
     min-height: 500px;
   }
   
@@ -24,14 +24,15 @@
         background: white;
         padding: 16px;
         text-align: left;
+        margin: auto;
         /* max-width: 500px; */
-        float: right;
+        /* float: right; */
   }
 
   .landingTable{
       /* background-image: url("../../assets/contact/image_contact.jpg"); */
       min-height: 500px;
-      table-layout: fixed ;
+      table-layout: fixed;
       width: 100% ;
       background-repeat: no-repeat;
       border-spacing: 0px;
@@ -54,6 +55,10 @@
   hr.blue {
     border: 10px solid #33bed0;
     border-radius: 5px;
+  }
+
+  .columnImage{
+    display: none;
   }
 
   @media screen and (max-width: 1300px) {
@@ -82,5 +87,21 @@
       }
     .tableTextSize{
         font-size: 16px;
+      }
+
+      .column{
+        width: 100%;
+      }
+
+      .row{
+        display: block;
+      }
+
+      .columnImage{
+        display: block;
+      }
+
+      .container{
+        background-image: none !important;
       }
   }

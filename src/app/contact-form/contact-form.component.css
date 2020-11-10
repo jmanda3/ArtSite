@@ -2,6 +2,11 @@
     box-sizing: border-box;
     color: white;
   }
+
+  .centerText{
+    font-size: 6em;
+    text-align: left;
+  }
   
   /* Style inputs */
   input[type=text],select, textarea {
@@ -66,15 +71,38 @@
       font-size: 24px;
       float: left;
   }
+
+  @media screen and (max-width: 1000px){
+    .centerText{
+      text-align: left;
+    }
+  }
   
   /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
   @media screen and (max-width: 800px) {
     .column, input[type=submit] {
       width: 100%;
       margin-top: 0;
+      padding: 0px;
     }
 
     .row{
         display: grid;
+    }
+
+    .centerText{
+      font-size: 3em;
+      text-align: center;
+    }
+
+    .container {
+      border-radius: 5px;
+      background-color: #33bed0;
+      padding: 20px 10px;
+    }
+
+    input[type=submit] {
+      background-color: #45a049;
+      padding: 12px 20px;
     }
   }

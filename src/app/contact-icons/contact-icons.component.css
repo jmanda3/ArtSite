@@ -1,5 +1,5 @@
 hr.blue {
-    border: 10px solid #33bed0;
+    border: 5px solid #33bed0;
     border-radius: 5px;
 }
 
@@ -22,6 +22,13 @@ hr.blue {
   }
 
   .icon{
-      max-width: 200px;
-      max-height: 200px;
+      max-width: 150px;
+      max-height: 150px;
+  }
+
+  @media screen and (max-width: 700px) {
+    .column {
+        width: 100%;
+        padding: 16px;
+      }
   }

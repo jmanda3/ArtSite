@@ -21,6 +21,7 @@ export class HeaderComponent implements OnInit {
     var urlSegments = window.location.href.split('/'); 
     this.pageRef = urlSegments[urlSegments.length - 1];
     this.pageRef = this.pageRef.charAt(0).toUpperCase() + this.pageRef.slice(1);
+    this.displaySmallNav = 'none;';
   }
 
   close(){
@@ -35,4 +36,13 @@ export class HeaderComponent implements OnInit {
       this.displaySmallNav = 'block';
     }
   }
+
+  toggleMenu(){
+    var x = document.getElementById("mobileNav");
+    if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+      } else {
+          x.className = x.className.replace(" w3-show", "");
+      }
+    }
 }

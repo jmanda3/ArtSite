@@ -20,6 +20,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { ContactIconsComponent } from './contact-icons/contact-icons.component';
 import { FullscreenImageViewerComponent } from './fullscreen-image-viewer/fullscreen-image-viewer.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { FullscreenImageViewerComponent } from './fullscreen-image-viewer/fullsc
     AppRoutingModule,
     MatPaginatorModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

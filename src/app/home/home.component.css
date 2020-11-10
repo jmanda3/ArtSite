@@ -10,6 +10,8 @@
     flex: 33%;
     /* max-width: 40%; */
     padding: 0 4px;
+    text-align: left; 
+    padding-right: 64px;
   }
   
   .column img {
@@ -23,23 +25,36 @@
     margin: 24px 0px;
   }
 
+  .mobileCentered{
+    
+  }
   /* .bottomImg{
     width: 100%;
     background-image: url('../../assets/home_images/footer_home.jpg');
   } */
   
-  /* Responsive layout - makes a two column-layout instead of four columns */
   @media screen and (max-width: 800px) {
     .column {
       flex: 50%;
       max-width: 50%;
+      text-align: center;
+      padding-right: 0px;
+    }
+
+    .mobileCentered{
+      text-align: center;
     }
   }
   
-  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
   @media screen and (max-width: 600px) {
     .column {
       flex: 100%;
       max-width: 100%;
+      text-align: center;
+      padding-right: 0px;
+    }
+    
+    .mobileCentered{
+      text-align: center;
     }
   }

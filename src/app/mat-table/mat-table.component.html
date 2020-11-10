@@ -1,12 +1,12 @@
-<div>
+<div style="text-align:left;">
     <label id="top" for="sortOptions" class="selectBoxLabel">Sort By:</label>
-    <select name="sortOptions" id="sortOptions" #t (change)="sortChanged(t.value)" [(ngModel)]="selectedSortOption" class="selectBox">
+    <select name="sortOptions" id="sortOptions" #t (change)="sortChanged(t.value)" [(ngModel)]="selectedSortOption" class="box selectBox">
         <option value="date">Date Desc</option>
         <option value="dateAsc">Date Asc</option>
         <option value="title">Title</option>
     </select>
     <label for="filterOptions" class="selectBoxLabel">Filter By:</label>
-    <select name="filterOptions" id="filterOptions" [(ngModel)]="selectedFilterOption" class="selectBox" (change)="filterOptionChanged()">
+    <select name="filterOptions" id="filterOptions" [(ngModel)]="selectedFilterOption" class="box selectBox" (change)="filterOptionChanged()">
         <option value=""></option>
         <option value="collection">Collection</option>
         <option value="medium">Medium</option>
