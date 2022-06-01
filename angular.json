@@ -117,6 +117,9 @@
               "devServerTarget": "lindsay-website-angular:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
