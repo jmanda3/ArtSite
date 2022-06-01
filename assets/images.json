@@ -7,8 +7,8 @@
         "collection": "Local Eats",
         "medium": "paint",
         "isFeatured": "false",
-        "imgUrl": "../../assets/grid_images/foodcoop_400x300.jpg",
-        "collectionUrl": "../../assets/grid_images/foodcoop_400x300.jpg"
+        "imgUrl": "assets/grid_images/foodcoop_400x300.jpg",
+        "collectionUrl": "assets/grid_images/foodcoop_400x300.jpg"
     },
     {
         "id":"2",
@@ -18,8 +18,8 @@
         "collection": "Local Eats",
         "medium": "paint",
         "isFeatured": "false",
-        "imgUrl": "../../assets/grid_images/giovannis_400x300.jpg",
-        "collectionUrl": "../../assets/grid_images/giovannis_400x300.jpg"
+        "imgUrl": "assets/grid_images/giovannis_400x300.jpg",
+        "collectionUrl": "assets/grid_images/giovannis_400x300.jpg"
     },
     {
         "id":"3",
@@ -29,8 +29,8 @@
         "collection": "Local Eats",
         "medium": "paint",
         "isFeatured": "false",
-        "imgUrl": "../../assets/grid_images/geppetto_400x300.jpg",
-        "collectionUrl": "../../assets/grid_images/geppetto_400x300.jpg"
+        "imgUrl": "assets/grid_images/geppetto_400x300.jpg",
+        "collectionUrl": "assets/grid_images/geppetto_400x300.jpg"
     },
     {
         "id":"4",
@@ -40,8 +40,8 @@
         "collection": "Local Eats",
         "medium": "paint",
         "isFeatured": "false",
-        "imgUrl": "../../assets/grid_images/anchorandanvil_400x300.jpg",
-        "collectionUrl": "../../assets/grid_images/anchorandanvil_400x300.jpg"
+        "imgUrl": "assets/grid_images/anchorandanvil_400x300.jpg",
+        "collectionUrl": "assets/grid_images/anchorandanvil_400x300.jpg"
     },
     {
         "id":"6",
@@ -51,8 +51,8 @@
         "collection": "Local Eats",
         "medium": "paint",
         "isFeatured": "false",
-        "imgUrl": "../../assets/grid_images/scoops_400x300.jpg",
-        "collectionUrl": "../../assets/grid_images/scoops_400x300.jpg"
+        "imgUrl": "assets/grid_images/scoops_400x300.jpg",
+        "collectionUrl": "assets/grid_images/scoops_400x300.jpg"
     },
     {
         "id":"6",
@@ -62,8 +62,8 @@
         "collection": "Local Eats",
         "medium": "paint",
         "isFeatured": "false",
-        "imgUrl": "../../assets/grid_images/lagourmandine_400x300.jpg",
-        "collectionUrl": "../../assets/grid_images/lagourmandine_400x300.jpg"
+        "imgUrl": "assets/grid_images/lagourmandine_400x300.jpg",
+        "collectionUrl": "assets/grid_images/lagourmandine_400x300.jpg"
     },
     {
         "id":"7",
@@ -73,8 +73,8 @@
         "collection": "Local Eats",
         "medium": "paint",
         "isFeatured": "false",
-        "imgUrl": "../../assets/grid_images/uptown_400x300.jpg",
-        "collectionUrl": "../../assets/grid_images/uptown_400x300.jpg"
+        "imgUrl": "assets/grid_images/uptown_400x300.jpg",
+        "collectionUrl": "assets/grid_images/uptown_400x300.jpg"
     },
     {
         "id":"8",
@@ -84,8 +84,8 @@
         "collection": "Local Eats",
         "medium": "paint",
         "isFeatured": "false",
-        "imgUrl": "../../assets/grid_images/badamos_400x300.jpg",
-        "collectionUrl": "../../assets/grid_images/badamos_400x300.jpg"
+        "imgUrl": "assets/grid_images/badamos_400x300.jpg",
+        "collectionUrl": "assets/grid_images/badamos_400x300.jpg"
     },
     {
         "id":"9",
@@ -95,8 +95,8 @@
         "collection": "Local Eats",
         "medium": "paint",
         "isFeatured": "false",
-        "imgUrl": "../../assets/grid_images/thaispoon_400x300.jpg",
-        "collectionUrl": "../../assets/grid_images/thaispoon_400x300.jpg"
+        "imgUrl": "assets/grid_images/thaispoon_400x300.jpg",
+        "collectionUrl": "assets/grid_images/thaispoon_400x300.jpg"
     },
     {
         "id":"5",
@@ -106,8 +106,8 @@
         "collection": "Local Eats",
         "medium": "paint",
         "isFeatured": "false",
-        "imgUrl": "../../assets/grid_images/muddycup_400x300.jpg",
-        "collectionUrl": "../../assets/grid_images/muddycup_400x300.jpg"
+        "imgUrl": "assets/grid_images/muddycup_400x300.jpg",
+        "collectionUrl": "assets/grid_images/muddycup_400x300.jpg"
     },
     {
         "id":"6",
@@ -117,8 +117,8 @@
         "collection": "",
         "medium": "paint",
         "isFeatured": "false",
-        "imgUrl": "../../assets/grid_images/wildflowers_400x300.jpg",
-        "collectionUrl": "../../assets/grid_images/wildflowers_400x300.jpg"
+        "imgUrl": "assets/grid_images/wildflowers_400x300.jpg",
+        "collectionUrl": "assets/grid_images/wildflowers_400x300.jpg"
     },
     {
         "id":"6",
@@ -128,8 +128,8 @@
         "collection": "",
         "medium": "paint",
         "isFeatured": "false",
-        "imgUrl": "../../assets/grid_images/daffodils_400x300.jpg",
-        "collectionUrl": "../../assets/grid_images/daffodils_400x300.jpg"
+        "imgUrl": "assets/grid_images/daffodils_400x300.jpg",
+        "collectionUrl": "assets/grid_images/daffodils_400x300.jpg"
     },
     {
         "id":"7",
@@ -139,8 +139,8 @@
         "collection": "",
         "medium": "paint",
         "isFeatured": "false",
-        "imgUrl": "../../assets/grid_images/twobungalos_400x300.jpg",
-        "collectionUrl": "../../assets/grid_images/twobungalos_400x300.jpg"
+        "imgUrl": "assets/grid_images/twobungalos_400x300.jpg",
+        "collectionUrl": "assets/grid_images/twobungalos_400x300.jpg"
     },
     {
         "id":"8",
@@ -150,8 +150,8 @@
         "collection": "",
         "medium": "paint",
         "isFeatured": "false",
-        "imgUrl": "../../assets/grid_images/weddingbouquet_400x300.jpg",
-        "collectionUrl": "../../assets/grid_images/weddingbouquet_400x300.jpg"
+        "imgUrl": "assets/grid_images/weddingbouquet_400x300.jpg",
+        "collectionUrl": "assets/grid_images/weddingbouquet_400x300.jpg"
     },
     {
         "id":"9",
@@ -161,8 +161,8 @@
         "collection": "",
         "medium": "paint",
         "isFeatured": "false",
-        "imgUrl": "../../assets/grid_images/08.23.2020_400x300.jpg",
-        "collectionUrl": "../../assets/grid_images/08.23.2020_400x300.jpg"
+        "imgUrl": "assets/grid_images/08.23.2020_400x300.jpg",
+        "collectionUrl": "assets/grid_images/08.23.2020_400x300.jpg"
     },
     {
         "id":"5",
@@ -172,8 +172,8 @@
         "collection": "",
         "medium": "paint",
         "isFeatured": "false",
-        "imgUrl": "../../assets/grid_images/redsunflowers_400x300.jpg",
-        "collectionUrl": "../../assets/grid_images/redsunflowers_400x300.jpg"
+        "imgUrl": "assets/grid_images/redsunflowers_400x300.jpg",
+        "collectionUrl": "assets/grid_images/redsunflowers_400x300.jpg"
     },
     {
         "id":"6",
@@ -183,8 +183,8 @@
         "collection": "",
         "medium": "paint",
         "isFeatured": "false",
-        "imgUrl": "../../assets/grid_images/junglelove_400x300.jpg",
-        "collectionUrl": "../../assets/grid_images/junglelove_400x300.jpg"
+        "imgUrl": "assets/grid_images/junglelove_400x300.jpg",
+        "collectionUrl": "assets/grid_images/junglelove_400x300.jpg"
     },
     {
         "id":"6",
@@ -194,8 +194,8 @@
         "collection": "",
         "medium": "paint",
         "isFeatured": "false",
-        "imgUrl": "../../assets/grid_images/moonlightonthelake_400x300.jpg",
-        "collectionUrl": "../../assets/grid_images/moonlightonthelake_400x300.jpg"
+        "imgUrl": "assets/grid_images/moonlightonthelake_400x300.jpg",
+        "collectionUrl": "assets/grid_images/moonlightonthelake_400x300.jpg"
     },
     {
         "id":"7",
@@ -205,8 +205,8 @@
         "collection": "",
         "medium": "paint",
         "isFeatured": "false",
-        "imgUrl": "../../assets/grid_images/lemontree_400x300.jpg",
-        "collectionUrl": "../../assets/grid_images/lemontree_400x300.jpg"
+        "imgUrl": "assets/grid_images/lemontree_400x300.jpg",
+        "collectionUrl": "assets/grid_images/lemontree_400x300.jpg"
     },
     {
         "id":"8",
@@ -216,8 +216,8 @@
         "collection": "",
         "medium": "paint",
         "isFeatured": "false",
-        "imgUrl": "../../assets/grid_images/limoncello_400x300.jpg",
-        "collectionUrl": "../../assets/grid_images/limoncello_400x300.jpg"
+        "imgUrl": "assets/grid_images/limoncello_400x300.jpg",
+        "collectionUrl": "assets/grid_images/limoncello_400x300.jpg"
     },
     {
         "id":"9",
@@ -227,8 +227,8 @@
         "collection": "",
         "medium": "paint",
         "isFeatured": "false",
-        "imgUrl": "../../assets/grid_images/untitled_400x300.jpg",
-        "collectionUrl": "../../assets/grid_images/untitled_400x300.jpg"
+        "imgUrl": "assets/grid_images/untitled_400x300.jpg",
+        "collectionUrl": "assets/grid_images/untitled_400x300.jpg"
     },
     {
         "id":"5",
@@ -238,8 +238,8 @@
         "collection": "",
         "medium": "paint",
         "isFeatured": "false",
-        "imgUrl": "../../assets/grid_images/self_about.jpg",
-        "collectionUrl": "../../assets/grid_images/leaves_400x300.jpg"
+        "imgUrl": "assets/grid_images/self_about.jpg",
+        "collectionUrl": "assets/grid_images/leaves_400x300.jpg"
     },
     {
         "id":"6",
@@ -249,8 +249,8 @@
         "collection": "",
         "medium": "paint",
         "isFeatured": "false",
-        "imgUrl": "../../assets/grid_images/parrotflowers_400x300.jpg",
-        "collectionUrl": "../../assets/grid_images/parrotflowers_400x300.jpg"
+        "imgUrl": "assets/grid_images/parrotflowers_400x300.jpg",
+        "collectionUrl": "assets/grid_images/parrotflowers_400x300.jpg"
     },
     {
         "id":"7",
@@ -260,8 +260,8 @@
         "collection": "",
         "medium": "paint",
         "isFeatured": "false",
-        "imgUrl": "../../assets/grid_images/drivingintothesunset_400x300.jpg",
-        "collectionUrl": "../../assets/grid_images/drivingintothesunset_400x300.jpg"
+        "imgUrl": "assets/grid_images/drivingintothesunset_400x300.jpg",
+        "collectionUrl": "assets/grid_images/drivingintothesunset_400x300.jpg"
     },
     {
         "id":"8",
@@ -271,8 +271,8 @@
         "collection": "",
         "medium": "paint",
         "isFeatured": "false",
-        "imgUrl": "../../assets/grid_images/pineapple_400x300.jpg",
-        "collectionUrl": "../../assets/grid_images/pineapple_400x300.jpg"
+        "imgUrl": "assets/grid_images/pineapple_400x300.jpg",
+        "collectionUrl": "assets/grid_images/pineapple_400x300.jpg"
     },
     {
         "id":"9",
@@ -282,8 +282,8 @@
         "collection": "",
         "medium": "paint",
         "isFeatured": "false",
-        "imgUrl": "../../assets/grid_images/watermelations_400x300.jpg",
-        "collectionUrl": "../../assets/grid_images/watermelations_400x300.jpg"
+        "imgUrl": "assets/grid_images/watermelations_400x300.jpg",
+        "collectionUrl": "assets/grid_images/watermelations_400x300.jpg"
     },
     {
         "id":"9",
@@ -293,8 +293,8 @@
         "collection": "",
         "medium": "paint",
         "isFeatured": "false",
-        "imgUrl": "../../assets/grid_images/dragonfruit_400x300.jpg",
-        "collectionUrl": "../../assets/grid_images/dragonfruit_400x300.jpg"
+        "imgUrl": "assets/grid_images/dragonfruit_400x300.jpg",
+        "collectionUrl": "assets/grid_images/dragonfruit_400x300.jpg"
     },
     {
         "id":"9",
@@ -304,8 +304,8 @@
         "collection": "",
         "medium": "paint",
         "isFeatured": "false",
-        "imgUrl": "../../assets/grid_images/sunflowers_400x300.jpg",
-        "collectionUrl": "../../assets/grid_images/sunflowers_400x300.jpg"
+        "imgUrl": "assets/grid_images/sunflowers_400x300.jpg",
+        "collectionUrl": "assets/grid_images/sunflowers_400x300.jpg"
     },
     {
         "id":"9",
@@ -315,8 +315,8 @@
         "collection": "",
         "medium": "paint",
         "isFeatured": "false",
-        "imgUrl": "../../assets/grid_images/sunsetdrool_400x300.jpg",
-        "collectionUrl": "../../assets/grid_images/sunsetdrool_400x300.jpg"
+        "imgUrl": "assets/grid_images/sunsetdrool_400x300.jpg",
+        "collectionUrl": "assets/grid_images/sunsetdrool_400x300.jpg"
     },
     {
         "id":"9",
@@ -326,8 +326,8 @@
         "collection": "",
         "medium": "paint",
         "isFeatured": "false",
-        "imgUrl": "../../assets/grid_images/pinklemonade_400x300.jpg",
-        "collectionUrl": "../../assets/grid_images/pinklemonade_400x300.jpg"
+        "imgUrl": "assets/grid_images/pinklemonade_400x300.jpg",
+        "collectionUrl": "assets/grid_images/pinklemonade_400x300.jpg"
     },
     {
         "id":"9",
@@ -337,8 +337,8 @@
         "collection": "",
         "medium": "paint",
         "isFeatured": "false",
-        "imgUrl": "../../assets/grid_images/lamansion_400x300.jpg",
-        "collectionUrl": "../../assets/grid_images/lamansion_400x300.jpg"
+        "imgUrl": "assets/grid_images/lamansion_400x300.jpg",
+        "collectionUrl": "assets/grid_images/lamansion_400x300.jpg"
     },
     {
         "id":"9",
@@ -348,8 +348,8 @@
         "collection": "",
         "medium": "paint",
         "isFeatured": "false",
-        "imgUrl": "../../assets/grid_images/postcardfromgreece_400x300.jpg",
-        "collectionUrl": "../../assets/grid_images/postcardfromgreece_400x300.jpg"
+        "imgUrl": "assets/grid_images/postcardfromgreece_400x300.jpg",
+        "collectionUrl": "assets/grid_images/postcardfromgreece_400x300.jpg"
     },
     {
         "id":"9",
@@ -359,8 +359,8 @@
         "collection": "",
         "medium": "paint",
         "isFeatured": "false",
-        "imgUrl": "../../assets/grid_images/provoke_400x300.jpg",
-        "collectionUrl": "../../assets/grid_images/provoke_400x300.jpg"
+        "imgUrl": "assets/grid_images/provoke_400x300.jpg",
+        "collectionUrl": "assets/grid_images/provoke_400x300.jpg"
     },
     {
         "id":"9",
@@ -370,8 +370,8 @@
         "collection": "",
         "medium": "digital",
         "isFeatured": "false",
-        "imgUrl": "../../assets/grid_images/justlikeus_400x300.jpg",
-        "collectionUrl": "../../assets/grid_images/justlikeus_400x300.jpg"
+        "imgUrl": "assets/grid_images/justlikeus_400x300.jpg",
+        "collectionUrl": "assets/grid_images/justlikeus_400x300.jpg"
     },
     {
         "id":"9",
@@ -381,8 +381,8 @@
         "collection": "",
         "medium": "digital",
         "isFeatured": "false",
-        "imgUrl": "../../assets/grid_images/cardsfalldown_400x300.jpg",
-        "collectionUrl": "../../assets/grid_images/cardsfalldown_400x300.jpg"
+        "imgUrl": "assets/grid_images/cardsfalldown_400x300.jpg",
+        "collectionUrl": "assets/grid_images/cardsfalldown_400x300.jpg"
     },
     {
         "id":"9",
@@ -392,8 +392,8 @@
         "collection": "",
         "medium": "digital",
         "isFeatured": "false",
-        "imgUrl": "../../assets/grid_images/claimyourinnocense_400x300.jpg",
-        "collectionUrl": "../../assets/grid_images/claimyourinnocense_400x300.jpg"
+        "imgUrl": "assets/grid_images/claimyourinnocense_400x300.jpg",
+        "collectionUrl": "assets/grid_images/claimyourinnocense_400x300.jpg"
     },
     {
         "id":"9",
@@ -403,8 +403,8 @@
         "collection": "",
         "medium": "digital",
         "isFeatured": "false",
-        "imgUrl": "../../assets/grid_images/boxnbots_400x300.jpg",
-        "collectionUrl": "../../assets/grid_images/boxnbots_400x300.jpg"
+        "imgUrl": "assets/grid_images/boxnbots_400x300.jpg",
+        "collectionUrl": "assets/grid_images/boxnbots_400x300.jpg"
     },
     {
         "id":"9",
@@ -414,8 +414,8 @@
         "collection": "",
         "medium": "digital",
         "isFeatured": "false",
-        "imgUrl": "../../assets/grid_images/slimefighter_400x300.jpg",
-        "collectionUrl": "../../assets/grid_images/slimefighter_400x300.jpg"
+        "imgUrl": "assets/grid_images/slimefighter_400x300.jpg",
+        "collectionUrl": "assets/grid_images/slimefighter_400x300.jpg"
     },
     {
         "id":"9",
@@ -425,8 +425,8 @@
         "collection": "",
         "medium": "digital",
         "isFeatured": "false",
-        "imgUrl": "../../assets/grid_images/constructionjohnny_400x300.jpg",
-        "collectionUrl": "../../assets/grid_images/constructionjohnny_400x300.jpg"
+        "imgUrl": "assets/grid_images/constructionjohnny_400x300.jpg",
+        "collectionUrl": "assets/grid_images/constructionjohnny_400x300.jpg"
     },
     {
         "id":"9",
@@ -436,8 +436,8 @@
         "collection": "",
         "medium": "digital",
         "isFeatured": "false",
-        "imgUrl": "../../assets/grid_images/slimefighter_icon_400x300.jpg",
-        "collectionUrl": "../../assets/grid_images/slimefighter_icon_400x300.jpg"
+        "imgUrl": "assets/grid_images/slimefighter_icon_400x300.jpg",
+        "collectionUrl": "assets/grid_images/slimefighter_icon_400x300.jpg"
     },
     {
         "id":"10",
@@ -447,8 +447,8 @@
         "collection": "",
         "medium": "digital",
         "isFeatured": "false",
-        "imgUrl": "../../assets/grid_images/abm_400x300.jpg",
-        "collectionUrl": "../../assets/grid_images/abm_400x300.jpg"
+        "imgUrl": "assets/grid_images/abm_400x300.jpg",
+        "collectionUrl": "assets/grid_images/abm_400x300.jpg"
     },
     {
         "id":"11",
@@ -458,8 +458,8 @@
         "collection": "",
         "medium": "digital",
         "isFeatured": "false",
-        "imgUrl": "../../assets/grid_images/CraftinMorgan_400x300.jpg",
-        "collectionUrl": "../../assets/grid_images/CraftinMorgan_400x300.jpg"
+        "imgUrl": "assets/grid_images/CraftinMorgan_400x300.jpg",
+        "collectionUrl": "assets/grid_images/CraftinMorgan_400x300.jpg"
     },
     {
         "id":"12",
@@ -469,7 +469,7 @@
         "collection": "",
         "medium": "digital",
         "isFeatured": "false",
-        "imgUrl": "../../assets/grid_images/Top5_400x300.jpg",
-        "collectionUrl": "../../assets/grid_images/Top5_400x300.jpg"
+        "imgUrl": "assets/grid_images/Top5_400x300.jpg",
+        "collectionUrl": "assets/grid_images/Top5_400x300.jpg"
     }
 ]
