@@ -21,6 +21,7 @@ import { FormsModule } from '@angular/forms';
 import { ContactIconsComponent } from './contact-icons/contact-icons.component';
 import { FullscreenImageViewerComponent } from './fullscreen-image-viewer/fullscreen-image-viewer.component';
 import { CommonModule } from '@angular/common';
+import { AdminPortalModule } from './admin-portal/admin-portal.module';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { CommonModule } from '@angular/common';
     MatPaginatorModule,
     BrowserAnimationsModule,
     FormsModule,
-    CommonModule
+    CommonModule,
+    AdminPortalModule
   ],
   providers: [],
   bootstrap: [AppComponent]

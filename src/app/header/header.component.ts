@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -14,7 +14,15 @@ export class HeaderComponent implements OnInit {
   pageRef: string = "Home"
   //displayFullNav = 'block';
   displaySmallNav = 'none;'
-  constructor(private route: ActivatedRoute) { }
+  isAdminSite: boolean;
+  
+  constructor(private router: Router) {
+    router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.isAdminSite = router.url.includes('admin');
+      }
+    });
+  }
 
   ngOnInit() {
     //This is getting the path and setting that to the Label at the top to show page

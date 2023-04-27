@@ -11,17 +11,26 @@
     <a target="_" href="https://www.etsy.com/shop/LindsayMillerArtShop?ref=search_shop_redirect" (click)="toggleMenu()" class="w3-bar-item w3-button">Shop</a>
     <a routerLink="/contact" (click)="toggleMenu()" class="w3-bar-item w3-button">Contact</a>
 </div>
+
 <header class=" w3-center" style="padding:0px 16px; margin: 0px;">
     <img class="logo" src="../../assets/lm_logo_header.png"/>
     <div style="margin-top: 16px;">Lindsay Miller Art</div>
 
-    <div class="w3-padding-32 w3-hide-small">
+    <div class="w3-padding-32 w3-hide-small" *ngIf="!isAdminSite">
         <div class="w3-bar">
         <a routerLink="/home" class="w3-bar-item w3-button headerBtn">Home</a>
         <a routerLink="/about" class="w3-bar-item w3-button headerBtn">About</a>
         <a routerLink="/portfolio" class="w3-bar-item w3-button headerBtn">Portfolio</a>
         <a target="_" href="https://www.etsy.com/shop/LindsayMillerArtShop?ref=search_shop_redirect" class="w3-bar-item w3-button headerBtn">Shop</a>
         <a routerLink="/contact" class="w3-bar-item w3-button headerBtn">Contact</a>
+        </div>
+    </div>
+
+    <div class="w3-padding-32 w3-hide-small" *ngIf="isAdminSite">
+        <div class="w3-bar">
+        <a routerLink="admin/home" class="w3-bar-item w3-button headerBtn">Home</a>
+        <a routerLink="admin/home" class="w3-bar-item w3-button headerBtn">Manage</a>
+        <a routerLink="admin/home" class="w3-bar-item w3-button headerBtn">Upload</a>
         </div>
     </div>
 </header>
