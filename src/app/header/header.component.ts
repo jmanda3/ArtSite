@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { AuthService } from '../shared/services/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -16,7 +17,7 @@ export class HeaderComponent implements OnInit {
   displaySmallNav = 'none;'
   isAdminSite: boolean;
   
-  constructor(private router: Router) {
+  constructor(private router: Router, public authService: AuthService) {
     router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         this.isAdminSite = router.url.includes('admin');

@@ -1,6 +1,6 @@
 import { CdkColumnDef } from '@angular/cdk/table';
 import { Component, ElementRef, Input, OnDestroy, OnInit, ViewChild } from '@angular/core';
-import { PageEvent } from '@angular/material/paginator';
+import { LegacyPageEvent as PageEvent } from '@angular/material/legacy-paginator';
 import { collection } from '../models/collection';
 import { image } from '../models/image';
 import collectionsJson from '../../assets/collections.json';

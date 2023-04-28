@@ -15,13 +15,21 @@ import { FeatureImagesComponent } from './feature-images/feature-images.componen
 import { FeatureTitlesComponent } from './feature-titles/feature-titles.component';
 import { PortfolioPageComponent } from './portfolio-page/portfolio-page.component';
 import { MatTableComponent } from './mat-table/mat-table.component';
-import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatLegacyPaginatorModule as MatPaginatorModule} from '@angular/material/legacy-paginator';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
 import { ContactIconsComponent } from './contact-icons/contact-icons.component';
 import { FullscreenImageViewerComponent } from './fullscreen-image-viewer/fullscreen-image-viewer.component';
 import { CommonModule } from '@angular/common';
 import { AdminPortalModule } from './admin-portal/admin-portal.module';
+import { FormsModule } from '@angular/forms';
+
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { environment } from '../environments/environment';
+import { AuthService } from './shared/services/auth.service';
 
 @NgModule({
   declarations: [
@@ -46,11 +54,16 @@ import { AdminPortalModule } from './admin-portal/admin-portal.module';
     AppRoutingModule,
     MatPaginatorModule,
     BrowserAnimationsModule,
-    FormsModule,
     CommonModule,
-    AdminPortalModule
+    AdminPortalModule,
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
+    AngularFireStorageModule,
+    AngularFireDatabaseModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
