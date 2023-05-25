@@ -15,7 +15,6 @@ import { FeatureImagesComponent } from './feature-images/feature-images.componen
 import { FeatureTitlesComponent } from './feature-titles/feature-titles.component';
 import { PortfolioPageComponent } from './portfolio-page/portfolio-page.component';
 import { MatTableComponent } from './mat-table/mat-table.component';
-import {MatLegacyPaginatorModule as MatPaginatorModule} from '@angular/material/legacy-paginator';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { ContactIconsComponent } from './contact-icons/contact-icons.component';
 import { FullscreenImageViewerComponent } from './fullscreen-image-viewer/fullscreen-image-viewer.component';
@@ -30,6 +29,7 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { environment } from '../environments/environment';
 import { AuthService } from './shared/services/auth.service';
+import { PaginatorModule } from 'primeng/paginator';
 
 @NgModule({
   declarations: [
@@ -52,7 +52,6 @@ import { AuthService } from './shared/services/auth.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatPaginatorModule,
     BrowserAnimationsModule,
     CommonModule,
     AdminPortalModule,
@@ -61,7 +60,8 @@ import { AuthService } from './shared/services/auth.service';
     AngularFireAuthModule,
     AngularFirestoreModule,
     AngularFireStorageModule,
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    PaginatorModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

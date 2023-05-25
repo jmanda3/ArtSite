@@ -7,6 +7,7 @@ import collectionsJson from '../../assets/collections.json';
 import mediumsJson from '../../assets/mediums.json';
 import { medium } from '../models/medium';
 import { isPlatformBrowser } from '@angular/common';
+import { ArtPiece } from '../shared/models/artPiece';
 
 @Component({
   selector: 'app-mat-table',
@@ -19,9 +20,9 @@ import { isPlatformBrowser } from '@angular/common';
 export class MatTableComponent implements OnInit, OnDestroy {
 
   @Input() collectionName;
-  @Input() imagesOriginal: image[];
+  @Input() imagesOriginal: ArtPiece[];
   defaultSort = 'date';
-  imagesModified: image[];
+  imagesModified: ArtPiece[];
   colArray = [];
   rowArray = [];
   imageGrid;
@@ -121,29 +122,29 @@ export class MatTableComponent implements OnInit, OnDestroy {
   }
 
   updatePage(e: any){
-    this.perPage = e.pageSize;
-    this.paginationIndex = e.pageIndex * this.perPage;
+    this.perPage = e.rows;
+    this.paginationIndex = e.page * this.perPage;
     this.setupImageTable();
     return e;
   }
 
   sortImages(sortOptions: string){
     if(sortOptions === 'date') {
-      this.imagesModified = this.imagesModified.sort((a: image, b: image) => {
-        if(new Date(b.dateOfCreation) > new Date(a.dateOfCreation)) return 1;
-        if(new Date(b.dateOfCreation) < new Date(a.dateOfCreation)) return -1;
+      this.imagesModified = this.imagesModified.sort((a: ArtPiece, b: ArtPiece) => {
+        if(new Date(b.created) > new Date(a.created)) return 1;
+        if(new Date(b.created) < new Date(a.created)) return -1;
         return 0;
       });
     }
     else if(sortOptions === 'dateAsc') {
-      this.imagesModified = this.imagesModified.sort((a: image, b: image) => {
-        if(new Date(a.dateOfCreation) > new Date(b.dateOfCreation)) return 1;
-        if(new Date(a.dateOfCreation) < new Date(b.dateOfCreation)) return -1;
+      this.imagesModified = this.imagesModified.sort((a: ArtPiece, b: ArtPiece) => {
+        if(new Date(a.created) > new Date(b.created)) return 1;
+        if(new Date(a.created) < new Date(b.created)) return -1;
         return 0;
       });
     }
     else if(sortOptions === 'title'){
-      this.imagesModified = this.imagesModified.sort((a: image, b: image) => {
+      this.imagesModified = this.imagesModified.sort((a: ArtPiece, b: ArtPiece) => {
         if(a.title < b.title) { return -1; }
         if(a.title > b.title) { return 1; }
         return 0;
@@ -153,14 +154,14 @@ export class MatTableComponent implements OnInit, OnDestroy {
   }
 
   filterImages(filterOptions: string, filterValue){
-    if(filterOptions.toUpperCase() === 'COLLECTION' && filterValue !== ''){
+    if(filterOptions.toUpperCase() === 'COLLECTION' && filterValue !== '' && filterValue !== undefined){
       this.imagesModified = this.imagesOriginal.filter(i => {
-        return i.collection.toUpperCase() === filterValue.toUpperCase();
+        return (i.collection !== null && i.collection !== undefined &&  i.collection.toUpperCase() === filterValue.toUpperCase());
       });
     }
-    else if(filterOptions.toUpperCase() === 'MEDIUM' && filterValue !== ''){
+    else if(filterOptions.toUpperCase() === 'MEDIUM' && filterValue !== '' && filterValue !== undefined){
       this.imagesModified = this.imagesOriginal.filter(i => {
-        return i.medium.toUpperCase() === filterValue.toUpperCase();
+        return (i.medium !== null && i.medium !== undefined && i.medium.toUpperCase() === filterValue.toUpperCase());
       });
     }
     else{

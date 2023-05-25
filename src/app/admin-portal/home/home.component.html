@@ -6,6 +6,7 @@
             <tr>
                 <!-- <th pSortableColumn="id" style="width:20%">Id <p-sortIcon field="id"></p-sortIcon></th> -->
                 <th pSortableColumn="title">Title <p-sortIcon field="title"></p-sortIcon></th>
+                <th pSortableColumn="description">Description <p-sortIcon field="description"></p-sortIcon></th>
                 <th pSortableColumn="created">Date Created <p-sortIcon field="created"></p-sortIcon></th>
                 <th pSortableColumn="available">Available <p-sortIcon field="available"></p-sortIcon></th>
                 <th pSortableColumn="collection">Collection <p-sortIcon field="collection"></p-sortIcon></th>
@@ -31,16 +32,33 @@
                 <td>
                     <p-cellEditor>
                         <ng-template pTemplate="input">
-                            <input pInputText type="text" [(ngModel)]="artwork.created">
+                            <input pInputText type="text" [(ngModel)]="artwork.description">
                         </ng-template>
                         <ng-template pTemplate="output">
-                            {{artwork.created}}
+                            {{artwork.description}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <p-calendar id="creationDate" name="creationDate" [(ngModel)]="artwork.created" required [showIcon]="true"></p-calendar>
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{artwork.created.toDate() | date}}
                         </ng-template>
                     </p-cellEditor></td>
                 <td>                
                     <p-cellEditor>
                         <ng-template pTemplate="input">
-                            <input pInputText type="text" [(ngModel)]="artwork.available">
+                            <div class="p-formgroup-inline">
+                                <div class="p-field-radiobutton">
+                                  <p-radioButton name="available" value=true label="Yes" [(ngModel)]="artwork.available" required></p-radioButton>
+                                </div>
+                                <div class="p-field-radiobutton">
+                                  <p-radioButton name="available" value=false label="No" [(ngModel)]="artwork.available" required></p-radioButton>
+                                </div>
+                              </div>
                         </ng-template>
                         <ng-template pTemplate="output">
                             {{artwork.available}}
@@ -50,7 +68,18 @@
                 <td>
                     <p-cellEditor>
                         <ng-template pTemplate="input">
-                            <input pInputText type="text" [(ngModel)]="artwork.collection">
+                            <p-dropdown name="collection" [options]="collections" [(ngModel)]="artwork.collection" optionValue="name" optionLabel="name" [showClear]="true" placeholder="Select a Collection">
+                                <ng-template let-item pTemplate="selectedItem">
+                                    <div class="flex align-items-center" *ngIf="artwork.collection">
+                                        <div>{{ item.name }}</div>
+                                    </div>
+                                </ng-template>
+                                <ng-template let-collection pTemplate="item">
+                                    <div class="flex align-items-center">
+                                        <div>{{ collection.name }}</div>
+                                    </div>
+                                </ng-template>
+                            </p-dropdown>
                         </ng-template>
                         <ng-template pTemplate="output">
                             {{artwork.collection}}
@@ -60,7 +89,18 @@
                 <td>
                     <p-cellEditor>
                         <ng-template pTemplate="input">
-                            <input pInputText type="text" [(ngModel)]="artwork.medium">
+                            <p-dropdown name="medium" [options]="mediums" [(ngModel)]="artwork.medium" optionValue="name" [showClear]="true" placeholder="Select a Medium">
+                                <ng-template let-item pTemplate="selectedItem">
+                                    <div class="flex align-items-center" *ngIf="artwork.medium">
+                                        <div>{{ item.name }}</div>
+                                    </div>
+                                </ng-template>
+                                <ng-template let-medium pTemplate="item">
+                                    <div class="flex align-items-center">
+                                        <div>{{ medium.name }}</div>
+                                    </div>
+                                </ng-template>
+                              </p-dropdown>
                         </ng-template>
                         <ng-template pTemplate="output">
                             {{artwork.medium}}

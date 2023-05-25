@@ -30,6 +30,7 @@
         <div class="w3-bar">
         <a routerLink="admin/dashboard" class="w3-bar-item w3-button headerBtn">Dashboard</a>
         <a routerLink="admin/upload" class="w3-bar-item w3-button headerBtn">Upload</a>
+        <a routerLink="admin/manage" class="w3-bar-item w3-button headerBtn">Manage</a>
         <a *ngIf="authService.isLoggedIn" class="w3-bar-item w3-button headerBtn" (click)="authService.SignOut()">
             <i class="fas fa-sign-out-alt"></i>Log out
           </a>

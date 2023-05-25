@@ -28,9 +28,9 @@
 <table class="table">
     <tbody>
         <tr *ngFor="let col of rowArray; index as i">
-        <td *ngFor="let col of colArray; index as j">
+        <td *ngFor="let col of colArray; index as j" class="tableColumn">
             <div *ngIf="imageGrid[i][j] !== null && imageGrid[i][j] !== undefined">
-                <img [src]="imageGrid[i][j].collectionUrl" alt="Norway" style="width:100%" class="w3-hover-opacity" (click)="showFullScreen(i, j)">
+                <img [src]="'/images/' + imageGrid[i][j].thumbnailImage" [alt]="imageGrid[i][j].title" style="width:100%; max-width: 387px;" class="w3-hover-opacity" (click)="showFullScreen(i, j)">
                 <div class="w3-container w3-white">
                     <p><b>{{imageGrid[i][j].title}}</b></p>
                     <p style="height: 70px;">{{imageGrid[i][j].description}}</p>
@@ -40,9 +40,10 @@
         </tr>
     </tbody>
 </table>
-<mat-paginator class="matExtras" [length]="imagesModified.length"
+<!-- <mat-paginator class="matExtras" [length]="imagesModified.length"
               [pageSize]="perPage"
               [pageSizeOptions]="pageSizeOptions"
               (page)="pageEvent = updatePage($event)">
-</mat-paginator>
+</mat-paginator> -->
+<p-paginator (onPageChange)="pageEvent = updatePage($event)" [rows]="perPage" [totalRecords]="imagesModified.length" [rowsPerPageOptions]="pageSizeOptions"></p-paginator>
 <app-fullscreen-image-viewer [images]="imagesModified" [imageIndex]="imageIndex" [show]="showFullscreen" (close)="closeEventHandler()"></app-fullscreen-image-viewer>

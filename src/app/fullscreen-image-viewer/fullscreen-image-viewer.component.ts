@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { image } from '../models/image';
+import { ArtPiece } from '../shared/models/artPiece';
 
 @Component({
   selector: 'app-fullscreen-image-viewer',
@@ -8,7 +9,7 @@ import { image } from '../models/image';
 })
 export class FullscreenImageViewerComponent implements OnInit {
 
-  @Input() images: image[];
+  @Input() images: ArtPiece[];
   @Input() imageIndex: number;
   @Input() show: boolean = false;
   @Output() close: EventEmitter<any> = new EventEmitter(); 

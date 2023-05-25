@@ -7,6 +7,10 @@ import { ArtPiece } from 'src/app/shared/models/artPiece';
 import { ArtService } from 'src/app/shared/services/art.service';
 import { map } from 'rxjs/operators';
 import { MessageService } from 'primeng/api';
+import { CollectionService } from 'src/app/shared/services/collection.service';
+import { MediumService } from 'src/app/shared/services/medium.service';
+import { Collection } from 'src/app/shared/models/collection';
+import { Medium } from 'src/app/shared/models/medium';
 
 @Component({
   selector: 'app-home',
@@ -17,9 +21,32 @@ import { MessageService } from 'primeng/api';
 export class HomeComponent implements OnInit {
   artPieces: ArtPiece[];
   clonedProducts: { [s: string]: ArtPiece } = {};
+  collections: Collection[];
+  mediums: Medium[];
   
 
-  constructor(private artService: ArtService, private messageService: MessageService) {
+  constructor(private artService: ArtService, 
+    private messageService: MessageService,
+    private collectionService: CollectionService,
+    private mediumService: MediumService) {
+    this.collectionService.getAll().snapshotChanges().pipe(
+      map(changes =>
+        changes.map(c =>
+          ({ id: c.payload.doc.id, ...c.payload.doc.data() })
+        )
+      )
+    ).subscribe(data => {
+      this.collections = data;
+    });
+    this.mediumService.getAll().snapshotChanges().pipe(
+      map(changes =>
+        changes.map(c =>
+          ({ id: c.payload.doc.id, ...c.payload.doc.data() })
+        )
+      )
+    ).subscribe(data => {
+      this.mediums = data;
+    });
    }
 
    ngOnInit(): void {
@@ -44,6 +71,7 @@ export class HomeComponent implements OnInit {
       // } else {
         //     this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Invalid Price' });
         // }
+      product.available = Boolean(product.available);
       this.artService.update(product.id, product);
       this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Aert piece is updated' });
   }

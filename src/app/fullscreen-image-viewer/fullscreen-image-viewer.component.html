@@ -3,7 +3,7 @@
     <span class="close" (click)="closeClicked()">&times;</span>
     <div class="container">
         <div class="imgContainer">
-            <img class="modal-content" id="modalImage" [(src)]="images[imageIndex].imgUrl">
+            <img class="modal-content" [alt]="images[imageIndex].title" id="modalImage" [(src)]="'/images/' + images[imageIndex].image">
         </div>
         <div class="arrowContainer">
             <a class="prev" (click)="previousArrowClicked()">❮</a>

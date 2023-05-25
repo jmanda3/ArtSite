@@ -1,0 +1,107 @@
+<!-- COllections -->
+<p-toast></p-toast>
+<div style="display: inline-flex;">
+    <div style="display: inline-flex;">
+        <h2>Collections</h2>
+        <button pButton pRipple label="+" class="p-button-success" (click)="toggleAddCollection()"></button>
+    </div>
+    <div *ngIf="uploadingCollection" style="display: inline-flex;">
+        <form #collectionForm="ngForm" (ngSubmit)="addCollection()" style="display: inline-flex;">
+            <div class="p-field" style="display: inline-flex;">
+              <label for="name">Name<span class="required">*</span></label>
+              <input pInputText type="text" id="name" name="name" [(ngModel)]="collection.name" required>
+            </div>
+            <p-button [disabled]="!canUpload || collectionForm.invalid" type="submit" label="Submit"></p-button>
+          </form>    
+    </div>
+</div>
+<div class="card">
+    <p-table [value]="collections" dataKey="id" editMode="row" [tableStyle]="{'min-width': '60rem'}">
+        <ng-template pTemplate="header">
+            <tr>
+                <!-- <th pSortableColumn="id" style="width:20%">Id <p-sortIcon field="id"></p-sortIcon></th> -->
+                <th pSortableColumn="name">Name <p-sortIcon field="name"></p-sortIcon></th>
+                <!-- <th></th>
+                <th></th> -->
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-collection let-editing="editing" let-ri="rowIndex">
+            <tr [pEditableRow]="collection">
+                <!-- <td>{{product.id}}</td> -->
+                <td>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="collection.name">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{collection.name}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <!-- <td>
+                    <div class="flex align-items-center justify-content-center gap-2">
+                        <button *ngIf="!editing" pButton pRipple type="button" pInitEditableRow icon="pi pi-pencil" (click)="onRowEditInit(artwork)" class="p-button-rounded p-button-text"></button>
+                        <button *ngIf="editing" pButton pRipple type="button" pSaveEditableRow icon="pi pi-check" (click)="onRowEditSave(artwork)" class="p-button-rounded p-button-text p-button-success mr-2"></button>
+                        <button *ngIf="editing" pButton pRipple type="button" pCancelEditableRow icon="pi pi-times" (click)="onRowEditCancel(artwork, ri)" class="p-button-rounded p-button-text p-button-danger"></button>
+                    </div>
+                </td>
+                <td>
+                    <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-warning" (click)="deleteArtwork(artwork, ri)"></button>
+                </td> -->
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
+<!-- Mediums -->
+<div>
+    <div style="display: inline-flex;">
+        <h2>Mediums</h2>
+        <button pButton pRipple label="+" class="p-button-success" (click)="toggleAddMedium()"></button>
+    </div>
+    <div *ngIf="uploadingMedium" style="display: inline-flex;">
+        <form #mediumForm="ngForm" (ngSubmit)="addMedium()" style="display: inline-flex;">
+            <div class="p-field" style="display: inline-flex;">
+              <label for="name">Name<span class="required">*</span></label>
+              <input pInputText type="text" id="name" name="name" [(ngModel)]="medium.name" required>
+            </div>
+            <p-button [disabled]="!canUpload || mediumForm.invalid" type="submit" label="Submit"></p-button>
+          </form>    
+    </div>
+</div>
+<div class="card">
+    <p-table [value]="mediums" dataKey="id" editMode="row" [tableStyle]="{'min-width': '60rem'}">
+        <ng-template pTemplate="header">
+            <tr>
+                <!-- <th pSortableColumn="id" style="width:20%">Id <p-sortIcon field="id"></p-sortIcon></th> -->
+                <th pSortableColumn="name">Name <p-sortIcon field="Name"></p-sortIcon></th>
+                <!-- <th></th>
+                <th></th> -->
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-medium let-editing="editing" let-ri="rowIndex">
+            <tr [pEditableRow]="medium">
+                <!-- <td>{{product.id}}</td> -->
+                <td>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="medium.name">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{medium.name}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <!-- <td>
+                    <div class="flex align-items-center justify-content-center gap-2">
+                        <button *ngIf="!editing" pButton pRipple type="button" pInitEditableRow icon="pi pi-pencil" (click)="onRowEditInit(artwork)" class="p-button-rounded p-button-text"></button>
+                        <button *ngIf="editing" pButton pRipple type="button" pSaveEditableRow icon="pi pi-check" (click)="onRowEditSave(artwork)" class="p-button-rounded p-button-text p-button-success mr-2"></button>
+                        <button *ngIf="editing" pButton pRipple type="button" pCancelEditableRow icon="pi pi-times" (click)="onRowEditCancel(artwork, ri)" class="p-button-rounded p-button-text p-button-danger"></button>
+                    </div>
+                </td>
+                <td>
+                    <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-warning" (click)="deleteArtwork(artwork, ri)"></button>
+                </td> -->
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
